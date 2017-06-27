@@ -58,7 +58,7 @@ GROUP BY Department_Cd
 HAVING COUNT(Staff_No) > 2 AND SUM(ISNULL(Pay, 0) + ISNULL(Allowance, 0)) > 20000
 ORDER BY 2 DESC
 
---Q6 (Incomplete)
-SELECT SUBSTRING(Staff_No, 1, 1), COUNT(Staff_No) AS 'Number of Staff' FROM Staff_Relation
-
-SELECT * FROM Staff_Relation
+--Q6 lists 1st alpahbet of staff no, number of staff, mean age of staff, grouped by 1st alphabet of staff no
+SELECT LEFT(Staff_No, 1) AS 'First Alpahbet', COUNT(*) AS 'Number of Staff', AVG(CAST(DATEDIFF(DD, Date_Of_Birth, GETDATE()) / 365.25 AS INT)) AS 'Mean Age' FROM Staff_Relation
+GROUP BY LEFT(Staff_No, 1)
+ORDER BY 2 DESC
