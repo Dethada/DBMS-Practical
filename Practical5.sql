@@ -28,7 +28,7 @@ SELECT Crse_Cd, UPPER(Crse_Name) AS 'Course Name (Upper)', LOWER(Crse_Name) AS '
 ORDER BY Crse_Cd DESC
 
 --Show that output in the question (Optional Q1)
-SELECT TOP 1 Staff_No, Staff_Name, 'No Supervisor' AS Supervisor FROM Staff_Relation
+SELECT Staff_No, Staff_Name, 'No Supervisor' AS Supervisor FROM Staff_Relation
 WHERE Staff_No = 'T001'
 
 --Display date in dd-mm-yyyy format
