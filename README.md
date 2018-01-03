@@ -1,2 +1,2 @@
 # DBMS-Practical
-All my SQL queries for DBMS practicals
+There are some mistakes i forgot where so check through yourself.
